@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const a = document.getElementById("a");
+            const b = document.getElementById("b");
+            const c = document.getElementById("c");
+            var circumference = 0;
+            const result = document.getElementById("result");
+
+            circum.addEventListener("click", () => {
+                circumference = parseFloat(a.value) + parseFloat(b.value) + parseFloat(c.value);
+                result.innerHTML = "The triangle circumference is: " + circumference;
+            });
+
+            area.addEventListener("click", () => {
+                const s = circumference / 2;
+                const A = (s - parseFloat(a.value));
+                const B = (s - parseFloat(b.value));
+                const C = (s - parseFloat(c.value));
+                const areaT = Math.sqrt(s * A * B * C);
+                result.innerHTML = "The triangle area is: " + areaT;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Tell me the triangle side lengths</h2>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="text" id="c">
+    <button id="circum">Circumference</button>
+    <button id="area">Area</button>
+    <p id="result"></p>
+</body>
+
+</html>
