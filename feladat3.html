@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            welcome.addEventListener("click", () => {
+                var date = new Date("October 19, 2023 02:30:00");
+                var hour = date.getHours()
+                console.log(hour)
+                if (hour < 9) {
+                    alert("Good Morning!")
+                }
+                else if (hour < 18) {
+                    alert("Good Day!")
+                }
+                else {
+                    alert("Good Evening!")
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <button id="welcome">Push me!!</button>
+</body>
+
+</html>
